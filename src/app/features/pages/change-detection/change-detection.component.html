@@ -1,5 +1,5 @@
 <section class="change0detection">
-	<app-title title="Change Detection" />
+	<app-title [title]="currentFramework()" />
 	<h2>Signal:</h2>
 	<pre>{{ frameworkAsSignal() | json }}</pre>
 	<h2 style="margin-top: 20px">Normal</h2>

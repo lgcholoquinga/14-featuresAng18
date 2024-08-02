@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 
 import { TitleComponent } from '@shared/components';
 
@@ -12,6 +12,8 @@ import { TitleComponent } from '@shared/components';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ChangeDetectionComponent {
+	public currentFramework = computed(() => `Change Detection: ${this.frameworkAsSignal().name}`);
+
 	public frameworkAsSignal = signal({
 		name: 'Angular',
 		releaseDate: 2016,
@@ -24,9 +26,7 @@ export default class ChangeDetectionComponent {
 
 	constructor() {
 		setTimeout(() => {
-			//this.frameworkAsSignal.set({ name: 'React Signal', releaseDate: 2020 });
-			this.frameworkAsProperty.name = 'React';
-			console.log('Done');
+			this.frameworkAsSignal.update((value) => ({ ...value, name: 'React Signal' }));
 		}, 3000);
 	}
 }
