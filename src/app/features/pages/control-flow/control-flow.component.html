@@ -1,1 +1,31 @@
-<p>control-flow works!</p>
+<div class="control-flow">
+	<app-title title="Control Flow" />
+	<h1>If</h1>
+	<h3 class="control-flow__user">Username: {{ userName() }}</h3>
+	@if (isAdmin()) {
+		<h3 class="control-flow__user">User is Admin</h3>
+	} @else {
+		<h3 class="control-flow__user">*******</h3>
+	}
+	<button (click)="onChangeRole()">Change Role</button>
+	<h1 style="margin-top: 20px">NgSwitch</h1>
+	@switch (grade()) {
+		@case ('A') {
+			<p>Above 90</p>
+		}
+		@case ('B') {
+			<p>Above 80</p>
+		}
+		@default {
+			<p>Failed</p>
+		}
+	}
+	<h1 style="margin-top: 20px">For</h1>
+	<ul>
+		@for (framework of frameworks(); track $index) {
+			<li>{{ framework }}</li>
+		} @empty {
+			<p>No data</p>
+		}
+	</ul>
+</div>
