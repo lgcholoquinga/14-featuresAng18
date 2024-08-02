@@ -1,1 +1,10 @@
-<p>defer-views works!</p>
+<section>
+	<app-title title="Defer Views / Block" />
+	@for (phone of phones; track $index) {
+		@defer (on viewport) {
+			<app-heavy-loaders-slow [title]="phone" />
+		} @placeholder {
+			<div class="box"></div>
+		}
+	}
+</section>

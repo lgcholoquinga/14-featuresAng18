@@ -1,1 +1,36 @@
-<p>defer-options works!</p>
+<section>
+	<app-title title="Defer Options" />
+
+	@defer (on interaction) {
+		<app-heavy-loaders-fast cssClass="">
+			<span>On Interaction</span>
+		</app-heavy-loaders-fast>
+	} @placeholder {
+		<div class="box"><span>Click here!</span></div>
+	}
+
+	<button #btInteraction>Click me</button>
+	@defer (on interaction(btInteraction)) {
+		<app-heavy-loaders-fast cssClass="">
+			<span>On Interaction</span>
+		</app-heavy-loaders-fast>
+	} @placeholder {
+		<div class="box"><span>Click here!</span></div>
+	}
+
+	@defer (on hover) {
+		<app-heavy-loaders-fast cssClass="">
+			<span>On Interaction</span>
+		</app-heavy-loaders-fast>
+	} @placeholder {
+		<div class="box"><span>Hover here!</span></div>
+	}
+
+	@defer (on timer(2000)) {
+		<app-heavy-loaders-fast cssClass="">
+			<span>On Timer</span>
+		</app-heavy-loaders-fast>
+	} @placeholder {
+		<div class="box"><span>Timer 2 seg</span></div>
+	}
+</section>
