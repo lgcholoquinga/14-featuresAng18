@@ -1,0 +1,36 @@
+.side-menu {
+	color: white;
+
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+}
+
+.menu {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	&__item {
+		text-decoration: none;
+		color: white;
+		cursor: pointer;
+		background-color: #6366f1;
+		border-radius: 4px;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			background-color: #4f46e5;
+		}
+	}
+}
+
+.menu-active {
+	background-color: #312e81;
+}

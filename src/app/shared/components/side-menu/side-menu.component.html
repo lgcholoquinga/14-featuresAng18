@@ -1,1 +1,9 @@
-<p>side-menu works!</p>
+<div class="side-menu">
+	<h2>LearningApp</h2>
+	<hr />
+	<div class="menu">
+		@for (menu of menuItems; track $index) {
+			<a class="menu__item" [routerLink]="menu.path" routerLinkActive="menu-active">{{ menu.title }}</a>
+		}
+	</div>
+</div>

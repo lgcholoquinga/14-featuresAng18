@@ -31,13 +31,13 @@ import { RouterLink } from '@angular/router';
 				width: auto;
 				padding: 10px 18px;
 				cursor: pointer;
-				background-color: #34d399;
+				background-color: #6366f1;
 				outline: none;
-				border: 1px solid #a7f3d0;
+				border: none;
 				border-radius: 4px;
 
 				&:hover {
-					background-color: #10b981;
+					background-color: #4f46e5;
 				}
 			}
 		}
