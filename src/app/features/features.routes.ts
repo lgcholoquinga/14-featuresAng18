@@ -9,27 +9,32 @@ export const FEATURES_ROUTES: Routes = [
 			{
 				path: 'change-detection',
 				title: 'Change Detection',
-				loadComponent: () => import('./pages/change-detection/change-detection.component'),
+				loadComponent: () =>
+					import('./pages/change-detection/change-detection.component'),
 			},
 			{
 				path: 'control-flow',
 				title: 'Control Flow',
-				loadComponent: () => import('./pages/control-flow/control-flow.component'),
+				loadComponent: () =>
+					import('./pages/control-flow/control-flow.component'),
 			},
 			{
 				path: 'defer-options',
 				title: 'Defer Options',
-				loadComponent: () => import('./pages/defer-options/defer-options.component'),
+				loadComponent: () =>
+					import('./pages/defer-options/defer-options.component'),
 			},
 			{
 				path: 'defer-views',
 				title: 'Defer Views',
-				loadComponent: () => import('./pages/defer-views/defer-views.component'),
+				loadComponent: () =>
+					import('./pages/defer-views/defer-views.component'),
 			},
 			{
 				path: 'view-transition',
 				title: 'View Transitions',
-				loadComponent: () => import('./pages/view-transition/view-transition.component'),
+				loadComponent: () =>
+					import('./pages/view-transition/view-transition.component'),
 			},
 			{
 				path: 'users-list',

@@ -8,7 +8,9 @@ import { RouterLink } from '@angular/router';
 	template: `
 		<section class="not-found">
 			<h3 class="not-found__heading">Page Not Found</h3>
-			<button class="not-found__button" routerLink="/features">Back to top</button>
+			<button class="not-found__button" routerLink="/features">
+				Back to top
+			</button>
 		</section>
 	`,
 	styles: `

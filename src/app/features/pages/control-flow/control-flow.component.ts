@@ -17,6 +17,6 @@ export default class ControlFlowComponent {
 	public frameworks = signal(['Angular', 'React', 'VueJS', 'Quiz']);
 
 	onChangeRole() {
-		this.isAdmin.update((value) => !value);
+		this.isAdmin.update(value => !value);
 	}
 }

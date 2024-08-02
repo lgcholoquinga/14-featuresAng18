@@ -10,8 +10,8 @@ import { FEATURES_ROUTES } from '@features/features.routes';
 	styleUrl: './side-menu.component.scss',
 })
 export class SideMenuComponent {
-	public menuItems = FEATURES_ROUTES.map((route) => route.children ?? [])
+	public menuItems = FEATURES_ROUTES.map(route => route.children ?? [])
 		.flat()
-		.filter((route) => route && route.path)
-		.filter((route) => !route.path?.includes(':'));
+		.filter(route => route && route.path)
+		.filter(route => !route.path?.includes(':'));
 }

@@ -5,7 +5,7 @@ import { Component, input } from '@angular/core';
 	standalone: true,
 	imports: [],
 	template: `
-		<h1 style="color: #3730a3;">{{ title() }}</h1>
+		<h1 style="color: #3730a3;font-size: 30px;">{{ title() }}</h1>
 		<hr style="margin-bottom: 20px;" />
 	`,
 	styles: ``,
