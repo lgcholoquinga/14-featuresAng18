@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { UsersService } from '@core/services';
+import { TitleComponent } from '@shared/components';
 
 @Component({
 	selector: 'app-users',
 	standalone: true,
-	imports: [],
+	imports: [TitleComponent, RouterLink],
 	templateUrl: './users.component.html',
-	styles: ``,
+	styleUrl: './users.component.scss',
 })
-export default class UsersComponent {}
+export default class UsersComponent {
+	public userService = inject(UsersService);
+}

@@ -1,1 +1,17 @@
-<p>user works!</p>
+<section id="user-detail">
+	<app-title [title]="titlePage()" />
+
+	<h2>User with Observable</h2>
+	@if (user$ | async; as user) {
+		<div class="user-detail-card">
+			<pre>{{ user | json }}</pre>
+		</div>
+	}
+
+	<h2>User with Signal</h2>
+	@if (userSignal()) {
+		<pre>{{ userSignal() | json }}</pre>
+	} @else {
+		<p>Loading User Detail</p>
+	}
+</section>

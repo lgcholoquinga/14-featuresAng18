@@ -1,1 +1,12 @@
-<p>users works!</p>
+<section class="users">
+	<app-title title="List of users" />
+
+	@for (user of userService.users(); track user.id) {
+		<div class="user-card">
+			<img [src]="user.avatar" [alt]="user.last_name" />
+			<a [routerLink]="['/features/user', user.id]">{{ user.last_name }} - {{ user.first_name }}</a>
+		</div>
+	} @empty {
+		<div>Loading data...</div>
+	}
+</section>
