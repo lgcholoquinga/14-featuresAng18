@@ -1,7 +1,12 @@
+<h1 class="title">Ricky Morty Characters</h1>
 <div class="character-list">
 	@if (characters$ | async; as characters) {
 		@for (character of characters; track character.id) {
-			<app-character-card [character]="character" />
+			@defer (on viewport) {
+				<app-character-card [character]="character" (onDetail)="onNavigateCharacterDetail($event)" />
+			} @placeholder {
+				<div class="character-placeholder"></div>
+			}
 		}
 	}
 </div>

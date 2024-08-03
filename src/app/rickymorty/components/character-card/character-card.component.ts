@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Character } from '@core/models/character.model';
 
 @Component({
@@ -10,4 +10,9 @@ import { Character } from '@core/models/character.model';
 })
 export class CharacterCardComponent {
 	character = input.required<Character>();
+	onDetail = output<number>();
+
+	onViewDetail(id: number) {
+		this.onDetail.emit(id);
+	}
 }

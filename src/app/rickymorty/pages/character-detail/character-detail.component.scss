@@ -1,22 +1,21 @@
-.character-card {
-	width: 100%;
-	border: 2px solid #4f46e5;
-	border-radius: 4px;
+.character-detail {
+	display: flex;
+	gap: 10px;
+	border: 2px solid #5b21b6;
+	border-radius: 10px;
 
 	&__image {
-		width: 100%;
-		display: block;
-		height: 200px;
+		img {
+			border-radius: 10px;
+		}
 	}
 
-	&__content {
-		padding: 4px 8px;
-	}
-
-	&__actions {
-		padding: 8px 8px;
+	&__details {
+		padding: 20px;
 		button {
+			margin-top: 10px;
 			width: 100%;
+			min-width: 200px;
 			min-height: 48px;
 			background-color: #4f46e5;
 			border: none;

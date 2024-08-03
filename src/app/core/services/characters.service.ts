@@ -11,10 +11,14 @@ import { Observable, map } from 'rxjs';
 	providedIn: 'root',
 })
 export class CharactersService {
-	private charcterUrl = `${environment.URL_API_MORTY}/character`;
+	private characterUrl = `${environment.URL_API_MORTY}/character`;
 	private http = inject(HttpClient);
 
 	getCharacters(): Observable<Character[]> {
-		return this.http.get<CharacterInfo>(this.charcterUrl).pipe(map((data) => CharacterAdapter(data)));
+		return this.http.get<CharacterInfo>(this.characterUrl).pipe(map((data) => CharacterAdapter(data)));
+	}
+
+	getCharacterById(id: number): Observable<Character> {
+		return this.http.get<Character>(`${this.characterUrl}/${id}`);
 	}
 }

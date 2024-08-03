@@ -1,0 +1,16 @@
+<h1 class="title">Character</h1>
+@if (character$ | async; as character) {
+	<div class="character-detail">
+		<div class="character-detail__image">
+			<img [src]="character.image" [alt]="character.name" />
+		</div>
+		<div class="character-detail__details">
+			<h3>{{ character.name }}</h3>
+			<p>{{ character.gender }}</p>
+			<p>{{ character.status }}</p>
+			<p>{{ character.type }}</p>
+			<p>{{ character.species }}</p>
+			<button (click)="onNavigateHome()">Go to List</button>
+		</div>
+	</div>
+}

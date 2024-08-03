@@ -6,6 +6,6 @@
 		<p class="character-card__text">{{ character().type }}</p>
 	</div>
 	<div class="character-card__actions">
-		<button>Go to detail</button>
+		<button (click)="onViewDetail(character().id)">Go to detail</button>
 	</div>
 </div>
