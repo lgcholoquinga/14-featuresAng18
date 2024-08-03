@@ -9,7 +9,9 @@
     "paths": {
       "@shared/*": ["app/shared/*"],
       "@features/*": ["app/features/*"],
-      "@core/*": ["app/core/*"]
+      "@core/*": ["app/core/*"],
+      "@rickymorty/*": ["app/rickymorty/*"],
+      "@scss/*" : ["scss/*"]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

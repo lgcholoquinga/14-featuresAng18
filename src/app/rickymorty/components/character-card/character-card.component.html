@@ -1,0 +1,11 @@
+<div class="character-card">
+	<img class="character-card__image" [src]="character().image" [alt]="character().name" />
+	<div class="character-card__content">
+		<h3 class="character-card__heading">{{ character().name }}</h3>
+		<p class="character-card__text">{{ character().gender }}</p>
+		<p class="character-card__text">{{ character().type }}</p>
+	</div>
+	<div class="character-card__actions">
+		<button>Go to detail</button>
+	</div>
+</div>
